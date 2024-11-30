@@ -61,7 +61,7 @@
             const namaPerusahaan = document.getElementById('namaPerusahaan').value;
             const posisiPekerjaan = document.getElementById('posisiPekerjaan').value;
             //convert tanggal ID
-            const tanggal = new Date(date).toLocaleDateString('id-ID');
+            const tanggal = new Intl.DateTimeFormat('id-ID',{day: 'numeric', month: 'long', year: 'numeric'}).format(new Date(date));
             // Template teks lamaran kerja
             const lamaranText = `
                 <div class="print-container">
@@ -77,7 +77,7 @@
                     Dengan hormat,
                     <p>
                     <p style="text-align : justify;">
-                        Perkenalkan, nama saya Syeh Abdi Yoga Krisna, mahasiswa lulusan Teknik Informatika dari Universitas Merdeka Pasuruan. Saya menulis surat ini dengan tujuan untuk mengajukan lamaran pekerjaan sebagai  ${posisiPekerjaan} di ${namaPerusahaan}. Dengan latar belakang di bidang Teknik Informatika, saya memiliki kompetensi dalam menguasai bahasa pemrograman web seperti HTML/CSS, JavaScript, PHP dan Golang. Selain itu, saya memiliki pemahaman dasar tentang jaringan komputer dan mampu mengoperasikan sistem operasi server linux yang mendukung kemampuan teknis saya.
+                        Perkenalkan, nama saya Syeh Abdi Yoga Krisna. Saya merupakan lulusan program studi Teknik Informatika dari Universitas Merdeka Pasuruan. Saya menulis surat ini dengan tujuan untuk mengajukan lamaran pekerjaan sebagai  ${posisiPekerjaan} di ${namaPerusahaan}. Dengan latar belakang di bidang Teknik Informatika, saya memiliki kompetensi dalam menguasai bahasa pemrograman web seperti HTML/CSS, JavaScript, PHP dan Golang. Selain itu, saya memiliki pemahaman dasar tentang jaringan komputer dan mampu mengoperasikan sistem operasi server linux yang mendukung kemampuan teknis saya.
                     </p>
                     <p style="text-align: justify;">
                         Selama studi, saya berpengalaman dalam pengembangan aplikasi web menggunakan Laravel. Proyek pertama saya adalah Sistem Informasi Perpustakaan saat magang di BSIP Ruminansia Besar, yang meningkatkan efisiensi pengelolaan buku, menyimpan data pengunjung, dan merekam aktivitas peminjaman. Saya juga berpartisipasi dalam proyek Sistem Penjaminan Mutu Internal Universitas Merdeka Pasuruan, yang telah diimplementasikan oleh lembaga PPM (Pusat Penjaminan Mutu) untuk memudahkan dalam penilaian dan evaluasi terhadap pembelajaran, fasilitas dan kenerja dosen beserta staf setiap program studi. Atas kontribusi ini, saya memperoleh sertifikat Hak Cipta dari Direktorat Jenderal Kekayaan Intelektual, yang mempermudah kelulusan saya tanpa proses skripsi.
@@ -88,6 +88,7 @@
                    <p style="text-align: justify;">
                       Hormat saya 
                     <br>
+                    <img width="100px" height="100px" src="image/ttd.png" alt="ttd" />
                     <br>
                       Syeh Abdi Yoga Krisna
                   </p>
